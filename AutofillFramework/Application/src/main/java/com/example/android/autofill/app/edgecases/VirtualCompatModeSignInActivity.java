@@ -29,7 +29,7 @@ import com.example.android.autofill.app.view.autofillable.CustomVirtualView;
 import com.example.android.autofill.app.view.autofillable.CustomVirtualViewCompatMode;
 
 /**
- * Activity that uses a virtual views for Username/Password text fields but doesn't explicitly
+ * Activity that uses a virtual view for Username/Password text fields but doesn't explicitly
  * implement the Autofill APIs but Accessibility's.
  *
  * <p><b>Note:</b> this class is useful to test an Autofill service that supports Compatibility
@@ -38,7 +38,7 @@ import com.example.android.autofill.app.view.autofillable.CustomVirtualViewCompa
 
  * <p>Useful to test an Autofill service that supports Compatibility Mode.
  *
- * <p><b>Note: </b>you must whitelist this app's package for compatibility mode. For exmaple, in
+ * <p><b>Note: </b>you must whitelist this app's package for compatibility mode. For example, in
  * a UNIX-like OS such as Linux, you can run:
  *
  * <pre>

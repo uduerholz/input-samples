@@ -17,18 +17,14 @@
 package com.example.android.autofill.app.commoncases;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.view.autofill.AutofillManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
 
 import com.example.android.autofill.app.R;
 import com.example.android.autofill.app.WelcomeActivity;
@@ -36,7 +32,7 @@ import com.example.android.autofill.app.WelcomeActivity;
 import static com.example.android.autofill.app.Util.DEBUG;
 import static com.example.android.autofill.app.Util.TAG;
 
-public class WebViewSignInActivity extends AppCompatActivity {
+public class WebViewCheckoutActivity extends AppCompatActivity {
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -52,10 +48,9 @@ public class WebViewSignInActivity extends AppCompatActivity {
         webView.addJavascriptInterface(this, "Android");
         webView.setWebViewClient(new WebViewClient());
 
-
         String url = getIntent().getStringExtra("url");
         if (url == null) {
-            url = "file:///android_res/raw/sample_form.html";
+            url = "file:///android_res/raw/checkout_form.html";
         }
         if (DEBUG) Log.d(TAG, "Clearing WebView data");
         webView.clearHistory();
@@ -63,12 +58,11 @@ public class WebViewSignInActivity extends AppCompatActivity {
         webView.clearCache(true);
         Log.i(TAG, "Loading URL " + url);
         webView.loadUrl(url);
-
     }
 
     @JavascriptInterface
     public void startNextActivity() {
-        Intent intent = WelcomeActivity.getStartActivityIntent(WebViewSignInActivity.this);
+        Intent intent = WelcomeActivity.getStartActivityIntent(WebViewCheckoutActivity.this);
         startActivity(intent);
         finish();
     }

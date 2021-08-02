@@ -59,7 +59,7 @@ public class ClientAutofillDataBuilder implements AutofillDataBuilder {
                     "dataset-" + datasetNumber + "." + partition, mPackageName);
             DatasetWithFilledAutofillFields dataset =
                     buildDatasetForPartition(autofillDataset, partition);
-            if (dataset != null && dataset.filledAutofillFields != null) {
+            if (dataset.filledAutofillFields != null) {
                 listBuilder.add(dataset);
             }
         }

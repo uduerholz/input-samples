@@ -68,6 +68,16 @@
             app:destinationActivityName="com.example.android.autofill.app.commoncases.WebViewSignInActivity" />
 
         <com.example.android.autofill.app.view.widget.NavigationItem
+            android:id="@+id/webviewCheckoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:imageColor="@android:color/holo_purple"
+            app:infoText="@string/webview_checkout_info"
+            app:itemLogo="@drawable/ic_web_black_24dp"
+            app:labelText="@string/navigation_button_web_view_checkout_label"
+            app:destinationActivityName="com.example.android.autofill.app.commoncases.WebViewCheckoutActivity" />
+
+        <com.example.android.autofill.app.view.widget.NavigationItem
             android:id="@+id/creditCardCompoundViewButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

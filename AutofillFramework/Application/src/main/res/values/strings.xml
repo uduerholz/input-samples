@@ -30,6 +30,7 @@
     <string name="navigation_button_recycler_view_label">Sample Credit Card Form Using RecyclerView</string>
     <string name="navigation_button_multiple_partitions_label">Sample Page with Multiple Data Partitions</string>
     <string name="navigation_button_web_view_login_label">Sample Login Using a WebView</string>
+    <string name="navigation_button_web_view_checkout_label">Sample Credit Card Check Out Using a WebView</string>
     <string name="navigation_button_anti_pattern_credit_card_label">Sample Credit Card Anti Pattern</string>
     <string name="navigation_button_anti_pattern_bad_view_structure_label">Bad View Structure Creation Anti Pattern</string>
     <string name="navigation_button_multistep_signin_label">Multi-Step Sign In</string>
@@ -108,6 +109,10 @@
         This is a sample login page that uses a WebView to control the UI. The HTML on the web page
         uses standard W3C autofill hints that the autofill service recognizes. No extra code is
         needed other than these hints.
+    </string>
+    <string name="webview_checkout_info">
+        This is a sample page that uses a WebView to control the UI. The HTML on the web page
+        uses standard W3C autofill hints for credit card checkout.
     </string>
     <string name="date_picker_credit_card_info">
         This is a sample credit card checkout page that uses a custom EditText and a DatePicker
@@ -191,21 +196,6 @@
         <item>app_provided_user</item>
     </string-array>
 
-    <string-array name="month_array">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-    </string-array>
-
     <string-array name="day_array">
         <item>1</item>
         <item>2</item>
@@ -234,6 +224,38 @@
         <item>25</item>
         <item>26</item>
         <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="month_array">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dez</item>
+    </string-array>
+
+    <string-array name="year_array">
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
     </string-array>
 
     <string name="recycler_view_label_name">Name</string>

@@ -15,7 +15,6 @@
  */
 package com.example.android.autofill.app.commoncases;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -62,16 +61,22 @@ public class StandardSignInActivity extends AppCompatActivity {
     }
 
     private void resetFields() {
-        mUsernameEditText.setText("");
-        mPasswordEditText.setText("");
+        if (mUsernameEditText != null && mPasswordEditText != null) {
+            mUsernameEditText.setText("");
+            mPasswordEditText.setText("");
+        }
     }
 
     /**
      * Emulates a login action.
      */
     private void login() {
-        String username = mUsernameEditText.getText().toString();
-        String password = mPasswordEditText.getText().toString();
+        String username = null;
+        String password = null;
+        if (mUsernameEditText != null && mPasswordEditText != null) {
+            username = mUsernameEditText.getText().toString();
+            password = mPasswordEditText.getText().toString();
+        }
         boolean valid = isValidCredentials(username, password);
         if (valid) {
             Intent intent = WelcomeActivity.getStartActivityIntent(StandardSignInActivity.this);
@@ -87,6 +92,6 @@ public class StandardSignInActivity extends AppCompatActivity {
      * authenticate users.
      */
     public boolean isValidCredentials(String username, String password) {
-        return username != null && password != null && username.equalsIgnoreCase(password);
+        return username != null && username.equalsIgnoreCase(password);
     }
 }

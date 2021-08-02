@@ -340,6 +340,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
         public CharSequence getEnteredText() {
             return mEnteredText;
         }
+
+        boolean equals(FieldMetadata other) {
+            return mAutofillId.equals(other.getAutofillId());
+        }
     }
 
     static class FieldDiff extends DiffUtil.ItemCallback<FieldMetadata> {

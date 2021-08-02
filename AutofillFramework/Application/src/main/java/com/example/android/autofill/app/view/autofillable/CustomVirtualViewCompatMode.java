@@ -116,7 +116,10 @@ public class CustomVirtualViewCompatMode extends AbstractCustomVirtualView {
         if (VERBOSE) {
             Log.v(TAG, "sendAccessibilityEvent(" + eventType + ", " + virtualId + "): " + event);
         }
-        getContext().getSystemService(AccessibilityManager.class).sendAccessibilityEvent(event);
+        AccessibilityManager mngr = getContext().getSystemService(AccessibilityManager.class);
+        if (mngr.isEnabled()) {
+            mngr.sendAccessibilityEvent(event);
+        }
     }
 
     private AccessibilityNodeInfo onProvideAutofillCompatModeAccessibilityNodeInfo() {

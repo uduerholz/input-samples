@@ -60,15 +60,15 @@
         android:layout_marginEnd="@dimen/spacing_normal"
         android:layout_marginStart="@dimen/spacing_normal"
         android:layout_marginTop="@dimen/spacing_large"
-        android:labelFor="@+id/obscureFieldId"
+        android:labelFor="@+id/usernameField"
         android:text="@string/username_label"
-        app:layout_constraintEnd_toStartOf="@+id/obscureFieldId"
+        app:layout_constraintEnd_toStartOf="@+id/usernameField"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/standard_login_header" />
 
     <EditText
-        android:id="@+id/obscureFieldId"
+        android:id="@+id/usernameField"
         android:layout_width="@dimen/text_field_width"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/spacing_normal"
@@ -88,15 +88,15 @@
         android:layout_marginEnd="@dimen/spacing_normal"
         android:layout_marginStart="@dimen/spacing_normal"
         android:layout_marginTop="@dimen/spacing_large"
-        android:labelFor="@+id/anotherObscureFieldId"
+        android:labelFor="@+id/passwordField"
         android:text="@string/password_label"
-        app:layout_constraintEnd_toStartOf="@+id/anotherObscureFieldId"
+        app:layout_constraintEnd_toStartOf="@+id/passwordField"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernameLabel" />
 
     <EditText
-        android:id="@+id/anotherObscureFieldId"
+        android:id="@+id/passwordField"
         android:layout_width="@dimen/text_field_width"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/spacing_normal"
@@ -121,7 +121,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/anotherObscureFieldId" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordField" />
 
     <TextView
         android:id="@+id/login"

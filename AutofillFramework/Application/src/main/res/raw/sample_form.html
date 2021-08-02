@@ -31,8 +31,18 @@
             <br />
             <input
                     type='submit'
-                    value='Login' />
+                    value='Login' onClick="startNextActivity()" />
         </form>
+
+        <script type="text/javascript">
+            function startNextActivity() {
+                Android.startNextActivity();
+            }
+        </script>
+
+        <br />
+        <br />
+
 
         <!--  Other autocomplete examples - they're not included because they would require
               filling all fields to trigger Save when using the sample services
